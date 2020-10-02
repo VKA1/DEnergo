@@ -1,0 +1,17 @@
+0 возьмите последний мастер
+git checkout master
+git pull
+
+1 создайте свою ветку от последнего мастера
+git checkout -b features/your_branch_name
+
+2 сделайте комиты
+
+3 запуште ветку на сервак
+git push --set-upstream origin features/your_branch_name
+
+4 зайдите на сайт репы, найдите свою ветку, создайте pull request
+
+5 замерджите свой пулл реквест на том же сайте
+
+6 возьмите последний мастер
