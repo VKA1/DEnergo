@@ -71,13 +71,13 @@ public class Intro : MonoBehaviour
             {
                 onBlink = false;
                 blink = 0;
-                swichIntro();
+                SwichIntro();
             }
         }
 
     }
 
-    void swichIntro()
+    void SwichIntro()
     {
         if (activeIntro < intros.Length - 1)
         {
@@ -88,6 +88,14 @@ public class Intro : MonoBehaviour
             intros[activeIntro].text = "";
             onAnimation = true;
         }
-
+        else
+        {
+            activeIntro = 0;
+            text = intros[0].text;
+            intros[intros.Length - 1].gameObject.SetActive(false);
+            intros[0].gameObject.SetActive(true);
+            intros[0].text = "";
+            onAnimation = true;
+        }
     }
 }
